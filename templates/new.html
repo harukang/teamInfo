@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>I 들의 모임</title>
+</head>
+<style>
+    .myteam {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .myteams {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 1200px;
+        height: 400px;
+
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: aqua;
+        padding: 20px;
+
+        width: 100vw;
+    }
+
+    .container {
+        width: 150px;
+        height: 350px;
+    }
+
+    .container .item {
+        width: 150px;
+        height: 350px;
+        border: 1px solid #828282;
+        font-size: 35px;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+
+    .container .item.front {
+        background-color: cornflowerblue;
+
+        position: absolute;
+        transform: rotateY(0deg);
+    }
+
+    .container:hover .item.front {
+        transform: rotateY(180deg);
+    }
+
+    .container .item.back {
+        background-color: lawngreen;
+
+        transform: rotateY(-180deg);
+    }
+
+    .container:hover .item.back {
+        transform: rotateY(0deg);
+    }
+</style>
+
+<body>
+    <div class="myteam">
+        <img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041892109147455558/e7104236ccc0a9dd.png">
+    </div>
+    <div class="myteams">
+        <div class="container">
+        <div class="item front"><img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041901155040641084/-.png" alt="img front"/></div>
+        <div class="item back">
+            <ul>
+              <li class="name">4조</li>
+              <li>팀목표</li>
+              <li>팀약속</li>
+              <li>팀특징</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item front"><img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041921563550826516/-1.png" alt="img front"/></div>
+        <div class="item back">
+            <ul>
+              <li class="name">강하루</li>
+              <li>음식</li>
+              <li>취미</li>
+              <li>MBTI</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item front"><img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041898946852835368/-.png" alt="img front"/></div>
+        <div class="item back">
+            <ul>
+                <li class="name">오명규</li>
+                <li>음식</li>
+                <li>취미</li>
+                <li>MBTI</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item front"><img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041898945946849401/-.png" alt="img front"/></div>
+        <div class="item back">
+            <ul>
+                <li class="name">김우중</li>
+                <li>음식</li>
+                <li>취미</li>
+                <li>MBTI</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item front"><img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041898946383052870/-.png" alt="img front"/></div>
+        <div class="item back">
+            <ul>
+                <li class="name">이호승</li>
+                <li>음식</li>
+                <li>취미</li>
+                <li>MBTI</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item front"><img src="https://cdn.discordapp.com/attachments/1041674977755271168/1041898945569378356/-.png" alt="img front"/></div>
+        <div class="item back">
+            <ul>
+                <li class="name">주민석</li>
+                <li>음식</li>
+                <li>취미</li>
+                <li>MBTI</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
