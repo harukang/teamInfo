@@ -52,6 +52,7 @@ li span{
   left: 24%;
   bottom: 5px;
   font-size: 25px;
+  display: none;
   text-align: center;
 }
 
