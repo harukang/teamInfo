@@ -34,10 +34,13 @@ li{
 li img {
   width: 150px;
   height: 500px;
+  position: relative;
 }
 
-li img:hover {
-  opacity: calc(0.5);
+li:hover img{
+  opacity: 0.5;
+  transform: rotate3d(0,1,0,180deg);
+  transition-duration: 1s;
 }
 li .Iname {
   position: absolute;
