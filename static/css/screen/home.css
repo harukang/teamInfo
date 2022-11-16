@@ -21,7 +21,7 @@
     transition: 1.5s ease-in-out;
     position: relative;
     transform-style: preserve-3d;
-    box-shadow: 0 0 50px 10px #adb5bd;
+    box-shadow: 0 0 50px 10px var(--shadow-color);
     border-radius: 15px;
 
 }
@@ -58,7 +58,7 @@
 }
 
 .rotate:first-child .front {
-    background-image: url("../../../imgs/teamavatar.png");
+    background-image: url("../../../imgs/team-avatar.png");
 }
 
 .rotate:nth-child(2) .front {
