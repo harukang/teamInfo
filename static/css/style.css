@@ -1,6 +1,10 @@
 /*config*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import "config/variables.css";
 @import "config/reset.css";
+
+/*component*/
+@import "component/screen-frame.css";
 
 /*screen*/
 @import "screen/home.css";
