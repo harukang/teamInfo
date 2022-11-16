@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81d20df2-b468-489f-92a5-ce60e20d4ebb" name="변경" comment="나는 진짜 바보 멍청이">
+    <list default="true" id="81d20df2-b468-489f-92a5-ce60e20d4ebb" name="변경" comment="img에 hover했을때 회전을 했던걸 li에 hover 했을때 img가 회전하게 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/I로고.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/로고.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/인트로 단체아바타.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/인트로 명규님아바타.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/인트로 민석님아바타.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/인트로 우중님아바타.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/인트로 하루님아바타.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/인트로 호승님아바타.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="master" />
@@ -29,8 +50,37 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sparta" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/sparta/pythonprac/genie.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="team" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,6 +91,10 @@
       <option name="presentableId" value="Default" />
       <updated>1668477002129</updated>
       <workItem from="1668477005503" duration="3237000" />
+      <workItem from="1668487502148" duration="2175000" />
+      <workItem from="1668510722173" duration="63000" />
+      <workItem from="1668566514288" duration="4977000" />
+      <workItem from="1668574365430" duration="362000" />
     </task>
     <task id="LOCAL-00001" summary="그냥 안바꿀래...★">
       <created>1668480374030</created>
@@ -70,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668482066814</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="img에 hover했을때 회전을 했던걸 li에 hover 했을때 img가 회전하게 수정">
+      <created>1668487569124</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668487569124</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +152,10 @@
     <MESSAGE value="그냥 안바꿀래...★" />
     <MESSAGE value="우우우우우웅우" />
     <MESSAGE value="나는 진짜 바보 멍청이" />
-    <option name="LAST_COMMIT_MESSAGE" value="나는 진짜 바보 멍청이" />
+    <MESSAGE value="img에 hover했을때 회전을 했던걸 li에 hover 했을때 img가 회전하게 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="img에 hover했을때 회전을 했던걸 li에 hover 했을때 img가 회전하게 수정" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/team$app.coverage" NAME="app 커버리지 결과" MODIFIED="1668574697867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
