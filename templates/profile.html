@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>프로필</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/profile.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script src="../static/script.js"></script>
+  <script>
+
+    function loadFile(input) {
+  var file = input.files[0];
+  $('#imgTag').html(" <img src='"+URL.createObjectURL(file)+"' style='max-height:432px; max-width:925px;'/> ");
+}
+
+function onClickUpload() {
+            let myInput = document.getElementById("inputImg");
+            myInput.click();
+        }
+
+  </script>
+
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="../static/images/I-logo.png" alt="로고" class="icon"></a>
+    <img src="../static/images/plus btn.png" alt="plus button" class="plusbtn">
+  </header>
+  <div class="self">
+    <div class="profileimg">
+      <img src="../static/images/minseok_profile.jpg" alt="프로필">
+    </div>
+    <div class="selftext">
+      <span>나를 소개해볼게~ 나는 주민석! MBTI는 INTP</span>
+    </div>
+  </div>
+
+  <div class="myimg">
+    <ul>
+      <li>
+        <span><img src="../static/images/bubble.png." alt="댓글" class="bubble"> 1</span>
+        <img src="../static/images/img-1.jpg" alt="꿔바로우">
+      </li>
+      <li>
+        <span><img src="../static/images/bubble.png" alt="댓글" class="bubble"> 1</span>
+        <img src="../static/images/img-2.jpg" alt="마라탕">
+      </li>
+      
+    </ul>
+  </div>
+
+   <div id="img_at">
+    <div id="img_at_bg"></div>
+        <div id="ia_body">
+      <div id="ia_header">
+        <button id="my-button" onclick="onClickUpload();">파일 불러오기</button>
+        <span id="iam">새 게시물 만들기</span>
+        <button id="ip">게시하기</button>
+      </div>
+      <div>
+        <div class="main">
+                <div id="imgTag"></div>
+                <input type="file" id="inputImg" name="outo" accept=".jpg,.png"  onchange="loadFile(this)">
+          </div>
+      
+      <div id="ipwindow-1">
+        <textarea id="ges" aria-label="게시글 작성하기..." placeholder="게시글 작성하기..." autocomplete="off" autocorrect="off" ></textarea>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="modal">
+    <div id="modal_bg"></div>
+    <div id="modal_body">
+      <div id="modal_img">
+        <img src="../static/images/img-1.jpg" alt="꿔바로우">
+      </div>
+      <div class="contents">
+         <div id="modal_text">
+        <span>
+          일요일에 꿔바로우도 먹었어요...★
+        </span>
+      </div>
+      <div id="modal_comment">
+        <ul>
+          <li>가나다라마바사</li>
+          <li>가나다라마바사</li>
+          <li>가나다라마바사</li>
+          <li>가나다라마바사</li>
+
+        </ul>
+      </div>
+      <div id="ipwindow">
+        <textarea id="dat" aria-label="댓글 달기..." placeholder="댓글 달기..." autocomplete="off" autocorrect="off" ></textarea>
+        <div class="sm"><span>게시</span></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>

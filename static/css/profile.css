@@ -1,0 +1,345 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #000;
+  font-family: 'Poor Story', cursive;
+}
+
+body {
+  width: 1200px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+header{
+  float: left;
+  width: 1200px;
+  height: 60px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+header .icon {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+header .plusbtn {
+  float: right;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 10%;
+  margin-top: 7px;
+}
+
+.self {
+  float: left;
+  width: 1200px;
+  height: 300px;
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+.profileimg {
+  float: left;
+  width: 250px;
+  height: 250px;
+}
+.profileimg img{
+  width: 250px;
+  height: 250px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-left: 60px;
+}
+
+.selftext {
+  float: right;
+  width: 500px;
+  height: 250px;
+  margin-top: 20px;
+  word-break:break-all;
+}
+.selftext span {
+  font-size: 30px;
+  text-align: right;
+}
+.myimg {
+  float: left;
+  width: 1200px;
+  height: 100%;
+  justify-content: space-around;
+  display: flex;
+  margin-top: 10px;
+  
+}
+.myimg li {
+  float: left;
+  margin-left: 40px;
+  margin-right: 40px;
+  position: relative;
+  margin-bottom: 20px;
+  
+}
+
+.myimg img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+}
+
+.myimg img:hover {
+  opacity: 0.5;
+}
+.myimg span img{
+  width: 50px;
+  height: 50px;
+}
+.myimg span {
+  position: absolute;
+  left: 35%;
+  bottom: 35%;
+  text-align: center;
+  display: none;
+  font-size: 50px;
+}
+
+
+.myimg li:hover span {
+  display: block;
+}
+
+
+#img_at {
+  display: none;
+  z-index: 1;
+}
+#img_at_bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position:fixed;
+}
+#img_at.active {
+  display: block;
+}
+
+#ia_body {
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 60%;
+  background-color: #fff;
+  position:absolute;
+  border-radius: 2%;
+  border: 1px solid rgb(216, 216, 216);
+}
+
+#ia_header {
+  display: flex;
+  justify-content:space-between;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+#my-button {
+  border: none;
+  background-color: #fff;
+}
+
+#my-button:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+#iam {
+  width: 25%;
+  height: 5%;
+  text-align: center;
+}
+#ip {
+  width: 15%;
+  height: 5%;
+  text-align: center;
+  color: rgb(88, 88, 255);
+  border-radius: 3%;
+  border: none;
+  background-color: #fff;
+  padding-left: 5px;
+}
+
+#ip:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+
+
+
+
+#multiple-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.image {
+  display: block;
+  width: 100%;
+}
+.image-label {
+  position: relative;
+  bottom: 22px;
+  left: 5px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+#main{
+  overflow: hidden;
+}
+
+#inputImg {
+  visibility: hidden;
+}
+
+#imgTag {
+  min-width: 200px;
+  height: 260px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+
+#ipwindow-1 {
+  float: left;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  border-top: 1px solid rgb(216, 216, 216);
+  position: absolute;
+}
+#ges {
+  float: left;
+  min-width: 90%;
+  height: 25px;
+  margin-top: 15px;
+  margin-left: 25px;
+  border: none;
+  resize: none;
+  word-break:break-all;
+  font-size: 20px;
+  position: relative;
+    
+}
+
+
+
+#modal {
+  display: none;
+  z-index: 1;
+}
+#modal_bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position:fixed;
+}
+#modal.active {
+  display: block;
+}
+
+#modal_body {
+  top: 5%;
+  left: 10%;
+  width: 85%;
+  height: 90%;
+  background-color: #fff;
+  position:absolute;
+}
+#modal_img {
+  float: left;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+#modal_img img {
+  float: left;
+  width: 600px;
+  height: 100%;
+}
+.contents {
+  display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    position: relative;
+    height: 100%;
+}
+
+#modal_text {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  font-size: auto;
+}
+#modal_text span {
+  float: left;
+  min-width: 80%;
+  text-align: left;
+  margin-left: 20px;
+  word-break:break-all;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+#modal_comment {
+  float: left;
+  text-align: left;
+  margin-top: 10px;
+}
+#modal_comment li {
+  float: left;
+  width: 600px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+#ipwindow {
+  float: left;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  border-top: 1px solid rgb(216, 216, 216);
+  position: absolute;
+}
+#dat {
+  float: left;
+  min-width: 80%;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border: none;
+    resize: none;
+    word-break:break-all;
+    font-size: 20px;
+    position: relative;
+}
+.sm {
+  float: right;
+  right: 5px;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  min-width: 10%;
+  position: absolute;
+}
+.sm:hover {
+  background-color: rgb(216, 216, 216);
+}
