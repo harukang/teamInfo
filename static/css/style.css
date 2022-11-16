@@ -1,65 +1,19 @@
-* {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  color: #fff;
-}
+/*config*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import "config/reset.css";
+
+/*screen*/
+@import "screen/home.css";
+@import "screen/profile.css";
 
 body {
-  background-color: #fff;
-  text-align: center;
-}
-.logowrap {
-  width: 1100px;
-}
-.logowrap img {
-  width: 400px;
-  height: 100px;
-  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e3f2fd;
+  cursor: url("config/cursor.cur"), pointer;
+  font-family: 'Open Sans', sans-serif;
 }
 
-div ul {
-  width: 1100px;
-  height: 500px;
-}
-li{
-  float: left;
-  width: 150px;
-  height: 500px;
-  margin-top: 75px;
-  background: #000000;
-  margin-left: 29px;
-  position: relative;
-}
-li img {
-  width: 150px;
-  height: 500px;
-  position: relative;
-}
-
-li:hover img{
-  opacity: 0.5;
-  transform: rotate3d(0,1,0,180deg);
-  transition-duration: 1s;
-}
-
-li .Iname {
-  position: absolute;
-  left: 13%;
-  bottom: 5px;
-  font-size: 25px;
-  text-align: center;
-}
-
-li span{
-  position: absolute;
-  left: 24%;
-  bottom: 5px;
-  font-size: 25px;
-  display: none;
-  text-align: center;
-}
-
-li:hover span {
-  display: block;
-}
