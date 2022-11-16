@@ -10,6 +10,7 @@
 @import "screen/home.css";
 @import "screen/profile.css";
 @import "screen/team.css";
+@import "screen/watch.css";
 
 body {
   height: 100vh;
