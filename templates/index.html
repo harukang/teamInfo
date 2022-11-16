@@ -1,95 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/css/style.css" />
     <title>4조 | I 들의 모임</title>
 
     <script>
-      $(document).ready(function () {
-            show_comment();
+        $(document).ready(function () {
+            user_info();
         });
 
-        function show_comment() {
+
+        function user_info() {
             $.ajax({
-                type: "GET",
-                url: "/",
-                data: {},
-                success: function (response) {
-                        let rows = response['tmis']
-                    for (let i = 0; i < rows.length; i++){
-                      let num = rows[i]['num']
-                      let name = rows[i]['name']
-                      let blog = rows[i]['blog']
-                      let mbti = rows[i]['mbti']
-                      let style = rows[i]['style']
-                      let profile = rows[i]['profile']
-                      let hobby = rows [i]['hobby']
+              type: "GET",
+              url: "/user",
+              data: {},
+              success: function (response) {
+                let rows = response['users']
+                for (let i = 0; i < rows.length; i++) {
+                  let name = rows[i]['name']
+                  let mbti = rows[i]['mbti']
+                  let hobby = rows [i]['hobby']
 
 
-                        let temp_html = `<ul>
-                                            <li class="name">${name}</li>
-                                            <li>${num}</li>
-                                            <li>${mbti}</li>
-                                            <li>${style}</li>
-                                            <li>${hobby}</li>
-                                            <li>${blog}</li>
-                                            </ul>`
-                        $('#tmi').append(temp_html)
-                    }
+                  let temp_html = `
+          <div class="front"></div>
+          <div class="back">
+<ul>
+                                        <li class="name"># ${name}</li>
+                                        <li># ${mbti}</li>
+                                        <li>#${hobby}</li>
+                                    </ul>
+          </div>`
+                  $('#user').append(temp_html)
+                }
+              }
+            })
+        }
     </script>
   </head>
   <body>
     <header class="index-header"></header>
     <main class="index-main">
-      <a href="#" class="rotate">
-        <div id="tmi" class="card">
-          <div class="front"></div>
-          <div class="back">
+      <a href="#" class="rotate" id="user">
+        <div class="card">
 
-          </div>
         </div>
       </a>
       <a href="#" class="rotate">
         <div class="card">
-          <div class="front"></div>
-          <div class="back">
 
-          </div>
         </div>
       </a>
-      <a href="#" class="rotate">
-        <div id="tmi" class="card">
-          <div class="front"></div>
-          <div class="back">
+      <a href="#" class="rotate" id="user">
+        <div class="card">
 
-          </div>
         </div>
       </a>
-      <a href="#" class="rotate">
-        <div id="tmi" class="card">
-          <div class="front"></div>
-          <div class="back">
+      <a href="#" class="rotate" id="user">
+        <div class="card">
 
-          </div>
         </div>
       </a>
-      <a href="#" class="rotate">
-        <div id="tmi" class="card">
-          <div class="front"></div>
-          <div class="back">
+      <a href="#" class="rotate" id="user">
+        <div class="card">
 
-          </div>
         </div>
       </a>
-      <a href="#" class="rotate">
-        <div id="tmi" class="card">
-          <div class="front"></div>
-          <div class="back">
 
-          </div>
-        </div>
-      </a>
     </main>
   </body>
 </html>

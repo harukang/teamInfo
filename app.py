@@ -7,12 +7,13 @@ db = client.teampage
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+   return render_template('index.html')
 
-@app.route("/", methods=["GET"])
-def home_get():
-    tmi_lists = list(db.user.find({}, {'_id': False}))
-    return jsonify({'tmis': tmi_lists})
+
+@app.route("/user", methods=["GET"])
+def user_get():
+    user_list = list(db.user.find({}, {'_id': False}))
+    return jsonify({'users': user_list})
 
 
 if __name__ == '__main__':
