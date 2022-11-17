@@ -79,9 +79,6 @@
     background-size: 150%;
 }
 
-.rotate:nth-ch
-}
-
 .rotate:last-child .front {
     background-color: deepskyblue;
     background-image: url("/static/imgs/wjavatar.png");

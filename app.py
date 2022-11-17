@@ -19,7 +19,7 @@ def name_get():
 @app.route("/users")
 def user_get():
     user_list = list(db.user.find({}, {'_id': False}))
-    return jsonify({'users': user_list})
+    return jsonify({'user_tmi': user_list})
 
 @app.route('/team')
 def team():
