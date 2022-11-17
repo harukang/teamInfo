@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/static/css/style.css"/>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/style.css"/>
     <title>4조 | Photo Upload</title>
     <script>
         $(document).ready(function () {
@@ -16,33 +17,45 @@
         });
 
         function getPhoto() {
-            let userId = '{{ user_id }}';
-            let photoId = '{{ photo_id }}';
+            const photo = '{{ photo }}'
+            const photoId = '{{ photo_id }}'
+            const commentsStr = '{{ comments }}'
+            const userId ='{{ user_id }}'
+            const comments = commentsStr.slice(1,-1).replaceAll("&#39;","").split(",").map(photo=>photo.trim())
 
 
-            $.ajax({
-                type: "GET",
-                url: `/users/${userId}/photos/${photoId}`,
-                data: {},
-                success: function (response) {
-                }
-            })
+            $('.close').attr('href',`/users/${userId}`)
+            $('.photo img').attr('src',`${photo}`)
 
-        }
+            console.log(comments)
+
+            if(comments.length !== 0){
+              for( let i = 0; i < comments.length; i++ ){
+                  let comment = comments[i]
+                  let temp_html = `<li>${comment}</li>`
+
+                  $('.comment_list').append(temp_html)
+                    }}
+            }
+
+
+
+
+
+
+
+
     </script>
 </head>
 <body>
 <main class="screen photo-screen">
-    <a href="#" class="close">❌</a>
+    <a href="" class="close">❌</a>
     <section class="photo">
-        <img src="/static/imgs/team-avatar.png"/>
+        <img src=""/>
     </section>
     <section class="comment">
-        <ul class="comment__list">
-            <li>comment 예시용</li>
-            <li>comment 예시용</li>
-            <li>comment 예시용</li>
-            <li>comment 예시용</li>
+        <ul class="comment_list">
+
         </ul>
         <form class="comment-form" method="post">
             <div>

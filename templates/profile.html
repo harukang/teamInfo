@@ -19,10 +19,6 @@
         function getProfile() {
             let userId = '{{ user_id }}'
             const avatar='{{ avatar }}'
-            const name ='{{ name }}'
-            const mbti = '{{ mbti }}'
-            const style ='{{ style }}'
-            const blog = '{{blog}}'
             const photosStr = '{{ photos }}'
             const photos = photosStr.slice(1,-1).replaceAll("&#39;","").split(",").map(photo=>photo.trim())
 
@@ -31,7 +27,7 @@
                     const tempHtml = `<a href=${userId}/photos/${i} class="feed">
                                       <img src=${photos[i - 1]}/>
                                       </a>`
-                    console.log(avatar)
+
                     $(".feed-box").append(tempHtml)
                 }
             }
