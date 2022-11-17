@@ -23,18 +23,15 @@
             const userId ='{{ user_id }}'
             const comments = commentsStr.slice(1,-1).replaceAll("&#39;","").split(",").map(photo=>photo.trim())
 
-
             $('.close').attr('href',`/users/${userId}`)
             $('.photo img').attr('src',`${photo}`)
-
-            console.log(comments)
 
             if(comments.length !== 0){
               for( let i = 0; i < comments.length; i++ ){
                   let comment = comments[i]
                   let temp_html = `<li>${comment}</li>`
 
-                  $('.comment_list').append(temp_html)
+                  $('.comment__list').append(temp_html)
                     }}
             }
 
@@ -54,8 +51,7 @@
         <img src=""/>
     </section>
     <section class="comment">
-        <ul class="comment_list">
-
+        <ul class="comment__list">
         </ul>
         <form class="comment-form" method="post">
             <div>
