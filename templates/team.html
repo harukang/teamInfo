@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../static/css/style.css"/>
+    <link rel="stylesheet" href="/static/css/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <head profile="http://www.w3.org/2005/10/profile"></head>
-<!--    <link rel="icon" type="image/png" href="http://example.com/myicon.png">-->
     <title>4조 | 팀 소개</title>
     <script>
         $(document).ready(function (){
@@ -36,71 +34,29 @@
 
                     const appointText = document.querySelector(".appoint__text")
                     appointText.textContent = appoint
-
                 }
             })
         }
-
-
-
-
-        // $.ajax({
-        //     type: "GET",
-        //     url: "/team/info",
-        //     data: {},
-        //     success: function (response) {
-        //         let rows = response['team']
-        //
-        //         console.log(rows)
-        //         const goal = rows[1].goal
-        //         const desc = rows[1].desc
-        //         const appoint = rows[1].appoint
-        //
-        //         const pText = document.querySelector(".goal__text")
-        //         pText.textContent = goal
-
-
-                // for (let i = 0; i < rows.length; i++) {
-                //     let goal = rows[i]['goal']
-                //     let desc = rows[i]['desc']
-                //     let appoint = rows[i]['appoint']
-
-
-                    // let goal_text = document.getElementsByClassName("goal__text")
-                    // goal_text.innerText = goal
-
-
-
-                    // let temp_html = '<p class="goal__text text--style">${goal}</p>' +
-                    //                 '<p class="desc__text text--style">${desc}</p>' +
-                    //                 '<p class="appoint__text text--style">${appoint}</p>'
-                    //
-                    //     $('.goal__text text--style').append(temp_html)
-                    //     $('.desc__text text--style').append(temp_html)
-                    //     $('.appoint__text text--style').append(temp_html)
-                    // }
-            //     }
-            // })
     </script>
 </head>
 <body>
 <section class="screen team-screen">
     <header class="team-header">
-        <a href="#" class="close">❌</a>
-        <img class="team-header__title" src="../static/imgs/title.png"/>
+        <a href="/" class="close">❌</a>
+        <img class="team-header__title" src="/static/imgs/title.png"/>
     </header>
     <main class="team-main">
         <section class="goal">
             <h3 class="goal__title title--style">🎯목표</h3>
-            <p class="goal__text text--style">{goal}</p>
+            <p class="goal__text text--style"></p>
         </section>
         <section class="description">
             <h3 class="desc__title title--style">🧑‍💻소개</h3>
-            <p class="desc__text text--style">{desc}</p>
+            <p class="desc__text text--style"></p>
         </section>
         <section class="appoint">
             <h3 class="appoint__title title--style">🤙약속</h3>
-            <p class="appoint__text text--style">{appoint}</p>
+            <p class="appoint__text text--style"></p>
         </section>
     </main>
 </section>
