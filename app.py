@@ -5,6 +5,7 @@ from pymongo import MongoClient
 client = MongoClient('mongodb+srv://teami:itogether@cluster0.2tv5dd1.mongodb.net/?retryWrites=true&w=majority')
 db = client.teampage
 
+
 @app.route('/')
 def home():
    return render_template('index.html')
