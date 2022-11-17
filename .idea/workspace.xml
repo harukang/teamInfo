@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81d20df2-b468-489f-92a5-ce60e20d4ebb" name="변경" comment="" />
+    <list default="true" id="81d20df2-b468-489f-92a5-ce60e20d4ebb" name="변경" comment="하루님!!!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +118,9 @@
       <workItem from="1668566514288" duration="4977000" />
       <workItem from="1668574365430" duration="362000" />
       <workItem from="1668603810011" duration="3820000" />
+      <workItem from="1668610679257" duration="436000" />
+      <workItem from="1668615589296" duration="1583000" />
+      <workItem from="1668643369713" duration="728000" />
     </task>
     <task id="LOCAL-00001" summary="그냥 안바꿀래...★">
       <created>1668480374030</created>
@@ -186,6 +192,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/teampj$app__1_.coverage" NAME="app (1) 커버리지 결과" MODIFIED="1668588256438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../sparta/projects/mars" />
     <SUITE FILE_PATH="coverage/team$app.coverage" NAME="app 커버리지 결과" MODIFIED="1668574697867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/teampj$app.coverage" NAME="app 커버리지 결과" MODIFIED="1668607460501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/teampj$app.coverage" NAME="app 커버리지 결과" MODIFIED="1668644082335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
