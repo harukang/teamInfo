@@ -15,55 +15,87 @@
     <title>4조 | I 들의 모임</title>
 
     <script>
-        $(document).ready(function () {
-            user_info();
+
+
+        $(document).ready( function () {
+           user_name();
         });
 
+
+
+        function user_name() {
+            $.ajax({
+              type: "GET",
+              url: "/names",
+              data: {},
+              success: function (response) {
+                let all_name = response['name_lists']
+                    let name_1 = all_name[0]['name']
+                    let name_2 = all_name[1]['name']
+                    let name_3 = all_name[2]['name']
+                    let name_4 = all_name[3]['name']
+
+                let temp_html_1 = `<a href="/team" class="rotate">
+                                        <div class="card">
+                                          <div class="front">
+                                          </div>
+                                          <div class="back">
+                                            <ul>
+                                              <li class="name">#4조</li>
+                                              <li># ${name_1}</li>
+                                              <li># ${name_2}</li>
+                                              <li># ${name_3}</li>
+                                              <li># ${name_4}</li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </a>`
+                $('#user_info').append(temp_html_1)
+                user_info()
+              }
+            })
+        }
 
         function user_info() {
             $.ajax({
               type: "GET",
-              url: "/user",
+              url: "/users",
               data: {},
               success: function (response) {
-                let rows = response['users']
+                let rows = response['user_tmi']
                 for (let i = 0; i < rows.length; i++) {
-                  let tmi = rows[i]['tmi']
-                  let mbti = rows[i]['mbti']
-                  let name = rows[i]['name']
-                  let profile = rows[i]['profile']
-
-                    let tmi_1 = tmi[0]
-                    let tmi_2 = tmi[1]
-                    let tmi_3 = tmi[2]
-
-                    let temp_html = `<a href="#" class="rotate" >
-                                    <div class="card">
-                                      <div class="front">
-                                      <img src="${profile}">
-                                      </div>
-                                      <div class="back">
-                                        <ul>
-                                            <li class="name"># ${name}</li>
-                                            <li># ${tmi_1}</li>
-                                            <li># ${tmi_2}</li>
-                                            <li># ${tmi_3}</li>
-                                            <li># ${mbti}</li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </a>
-`
-                  $('#user_info').append(temp_html)
+                    let num = rows[i]['num']
+                    let mbti = rows[i]['mbti']
+                    let name = rows[i]['name']
+                    let tmi = rows[i]['tmi']
+                      let tmi_1 = tmi[0]
+                      let tmi_2 = tmi[1]
+                      let tmi_3 = tmi[2]
 
 
+                    let temp_html_2 = `<a href="/users/${num}" class="rotate">
+                                        <div class="card">
+                                          <div class="front">
+                                          </div>
+                                          <div class="back">
+                                            <ul>
+                                              <li class="name"># ${name}</li>
+                                              <li># ${tmi_1}</li>
+                                              <li># ${tmi_2}</li>
+                                              <li># ${tmi_3}</li>
+                                              <li># ${mbti}</li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </a>`
 
-
-
+                    $('#user_info').append(temp_html_2)
+                  }
                 }
-              }
             })
         }
+
+
     </script>
   </head>
   <body>

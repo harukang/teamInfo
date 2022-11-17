@@ -9,12 +9,23 @@ db = client.teampage
 def home():
    return render_template('index.html')
 
+@app.route("/names")
+def name_get():
+    name_list = list(db.user.find({},{'_id':False,'num':False,'blog':False,'style':False,'hobby':False,'tmi':False, 'mbti':False,'avatar':False,'photo':False,'comment':False}))
+    return jsonify({'name_lists': name_list})
 
-@app.route("/user", methods=["GET"])
+@app.route("/users")
 def user_get():
     user_list = list(db.user.find({}, {'_id': False}))
-    return jsonify({'users': user_list})
+    return jsonify({'user_tmi': user_list})
 
+@app.route("/users/<int:users_id>")
+def profile(users_id):
+   return render_template('profile.html')
+
+@app.route('/team')
+def team():
+   return render_template('team.html')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
