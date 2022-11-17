@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="개인 페이지 데이터 가져오기 성공 미완성">
+    <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="호승님 코드 간단한 수정&#10;&#10;주석 삭제 필요없는 코드 삭제&#10;&#10;certifi import&#10;환경 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/screen/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,7 @@
       <workItem from="1668664382635" duration="505000" />
       <workItem from="1668664896143" duration="41000" />
       <workItem from="1668664942562" duration="11365000" />
-      <workItem from="1668678116802" duration="11477000" />
+      <workItem from="1668678116802" duration="10217000" />
     </task>
     <task id="LOCAL-00001" summary="백엔드 시작&#10;&#10;URL 경로, template 지정">
       <created>1668665436309</created>
@@ -114,14 +116,7 @@
       <option name="project" value="LOCAL" />
       <updated>1668665436309</updated>
     </task>
-    <task id="LOCAL-00002" summary="개인 페이지 데이터 가져오기 성공 미완성">
-      <created>1668688681254</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668688681255</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +133,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="origin/kwj" />
                       </list>
                     </value>
                   </entry>
@@ -153,10 +148,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="변경점 없음" />
     <MESSAGE value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
-    <MESSAGE value="개인 페이지 데이터 가져오기 성공 미완성" />
-    <option name="LAST_COMMIT_MESSAGE" value="개인 페이지 데이터 가져오기 성공 미완성" />
+    <option name="LAST_COMMIT_MESSAGE" value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668689068695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668694996460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
