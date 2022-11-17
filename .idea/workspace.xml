@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="변경점 없음">
+    <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="백엔드 시작&#10;&#10;URL 경로, template 지정">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/screen/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/screen/team.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/team.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/watch.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/watch.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -34,6 +50,9 @@
   }
 }</component>
   <component name="RunManager" selected="Flask 서버.Flask (app.py)">
+    <configuration name="profile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63837/teamInfo/templates/profile.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="teamInfo" type="PythonConfigurationType" factoryName="Python">
       <module name="teamInfo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,6 +93,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Flask 서버.Flask (app.py)" />
+        <item itemvalue="JavaScript 디버그.profile.html" />
+        <item itemvalue="Flask 서버.Flask (app.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -87,8 +108,17 @@
       <updated>1668664378604</updated>
       <workItem from="1668664382635" duration="505000" />
       <workItem from="1668664896143" duration="41000" />
-      <workItem from="1668664942562" duration="366000" />
+      <workItem from="1668664942562" duration="11365000" />
+      <workItem from="1668678116802" duration="10217000" />
     </task>
+    <task id="LOCAL-00001" summary="백엔드 시작&#10;&#10;URL 경로, template 지정">
+      <created>1668665436309</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668665436309</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,7 +135,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/wj" />
+                        <option value="origin/kwj" />
                       </list>
                     </value>
                   </entry>
@@ -119,9 +149,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="변경점 없음" />
-    <option name="LAST_COMMIT_MESSAGE" value="변경점 없음" />
+    <MESSAGE value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
+    <option name="LAST_COMMIT_MESSAGE" value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668665202147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668687755049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

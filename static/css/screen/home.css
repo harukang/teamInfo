@@ -2,7 +2,7 @@
     width: 1500px;
     height: 200px;
 
-    background-image: url("../../imgs/title.png");
+    background-image: url("/static/imgs/title.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -58,36 +58,36 @@
 }
 
 .rotate:first-child .front {
-    background-image: url("../../imgs/team-avatar.png");
+    background-image: url("/static/imgs/team-avatar.png");
 }
 
 .rotate:nth-child(2) .front {
     background-color: bisque;
-    background-image: url("../../imgs/msavatar.png");
+    background-image: url("/static/imgs/msavatar.png");
     background-size: 150%;
 }
 
 .rotate:nth-child(3) .front {
     background-color: aquamarine;
-    background-image: url("../../imgs/hravatar.png");
+    background-image: url("/static/imgs/hravatar.png");
     background-size: 150%;
 }
 
 .rotate:nth-child(4) .front {
     background-color: cadetblue;
-    background-image: url("../../imgs/wjavatar.png");
+    background-image: url("/static/imgs/wjavatar.png");
     background-size: 150%;
 }
 
 .rotate:nth-child(5) .front {
     background-color: saddlebrown;
-    background-image: url("../../imgs/mgavatar.png");
+    background-image: url("/static/imgs/mgavatar.png");
     background-size: 150%;
 }
 
 .rotate:last-child .front {
     background-color: deepskyblue;
-    background-image: url("../../imgs/hsavatar.png");
+    background-image: url("/static/imgs/hsavatar.png");
     background-size: 150%;
 }
 
