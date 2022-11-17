@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="백엔드 시작&#10;&#10;URL 경로, template 지정">
+    <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="호승님 코드 간단한 수정&#10;&#10;주석 삭제 필요없는 코드 삭제&#10;&#10;certifi import&#10;환경 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/screen/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/screen/team.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/team.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/screen/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/watch.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/watch.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +151,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668687755049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668694996460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
