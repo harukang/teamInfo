@@ -14,35 +14,59 @@
     <script>
         $(document).ready(function () {
             getPhoto()
+            showComment()
         });
+        const photoId = '{{ photo_id }}'
+        const userId = '{{ user_id }}'
+
 
         function getPhoto() {
             const photo = '{{ photo }}'
-            const photoId = '{{ photo_id }}'
-            const commentsStr = '{{ comments }}'
-            const userId ='{{ user_id }}'
-            const comments = commentsStr.slice(1,-1).replaceAll("&#39;","").split(",").map(photo=>photo.trim())
+            {#const commentsStr = '{{ comments }}'#}
+            {#const comments = commentsStr.slice(1, -1).replaceAll("&#39;", "").split(",").map(photo => photo.trim())#}
 
 
-            $('.close').attr('href',`/users/${userId}`)
-            $('.photo img').attr('src',`${photo}`)
+            $('.close').attr('href', `/users/${userId}`)
+            $('.photo img').attr('src', `${photo}`)
 
-            console.log(comments)
+            {#if (comments.length !== 0) {#}
+            {#    for (let i = 0; i < comments.length; i++) {#}
+            {#        let comment = comments[i]#}
+            {#        let temp_html = `<li>${comment}</li>`#}
+            {##}
+            {#        $('.comment__list').append(temp_html)#}
+            {#    }#}
+            {# }#}
+        }
 
-            if(comments.length !== 0){
-              for( let i = 0; i < comments.length; i++ ){
-                  let comment = comments[i]
-                  let temp_html = `<li>${comment}</li>`
+        function saveComment(){
+            const giveComment = $("#comment-input").val()
+            $.ajax({
+                type:'POST',
+                url: '/comments',
+                data: {giveComment, photoId,userId},
+                success: function (response){
+                    window.location.reload()
+                }
+            })
+        }
 
-                  $('.comment_list').append(temp_html)
-                    }}
-            }
-
-
-
-
-
-
+        function showComment(){
+            $.ajax({
+                type:"GET",
+                url:"/comments",
+                data:{},
+                success: function (response){
+                    const comments = response.comments
+                    comments.forEach(item=>{
+                        if((userId===item.user_idx)&&(photoId===item.photo_idx)){
+                            let temp_html =`<li>${item.comment}</li>`
+                            $('.comment__list').append(temp_html)
+                        }
+                    })
+                }
+            })
+        }
 
 
     </script>
@@ -54,15 +78,15 @@
         <img src=""/>
     </section>
     <section class="comment">
-        <ul class="comment_list">
+        <ul class="comment__list">
 
         </ul>
-        <form class="comment-form" method="post">
+        <div class="comment-form">
             <div>
                 <input type="text" name="comment" id="comment-input" placeholder="🗨️ 예쁘게 말하기">
-                <input type="submit" value="⬆️" id="comment-submit">
+                <button onclick="saveComment()" type="button" id="comment-submit">⬆️</button>
             </div>
-        </form>
+        </div>
     </section>
 </main>
 </body>

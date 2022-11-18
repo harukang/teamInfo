@@ -1,0 +1,110 @@
+Index: templates/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\r\n          integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\r\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\r\n            integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\"\r\n            crossorigin=\"anonymous\"></script>\r\n    <link rel=\"stylesheet\" href=\"../static/css/style.css\" />\r\n    <title>4조 | I 들의 모임</title>\r\n\r\n    <script>\r\n\r\n\r\n        $(document).ready( function () {\r\n           user_name();\r\n        });\r\n\r\n\r\n\r\n        function user_name() {\r\n            $.ajax({\r\n              type: \"GET\",\r\n              url: \"/names\",\r\n              data: {},\r\n              success: function (response) {\r\n                let all_name = response['name_lists']\r\n                    let name_1 = all_name[0]['name']\r\n                    let name_2 = all_name[1]['name']\r\n                    let name_3 = all_name[2]['name']\r\n                    let name_4 = all_name[3]['name']\r\n\r\n                let temp_html_1 = `<a href=\"/team\" class=\"rotate\">\r\n                                        <div class=\"card\">\r\n                                          <div class=\"front\">\r\n                                          </div>\r\n                                          <div class=\"back\">\r\n                                            <ul>\r\n                                              <li class=\"name\">#4조</li>\r\n                                              <li># ${name_1}</li>\r\n                                              <li># ${name_2}</li>\r\n                                              <li># ${name_3}</li>\r\n                                              <li># ${name_4}</li>\r\n                                            </ul>\r\n                                          </div>\r\n                                        </div>\r\n                                      </a>`\r\n                $('#user_info').append(temp_html_1)\r\n                user_info()\r\n              }\r\n            })\r\n        }\r\n\r\n        function user_info() {\r\n            $.ajax({\r\n              type: \"GET\",\r\n              url: \"/users\",\r\n              data: {},\r\n              success: function (response) {\r\n                let rows = response['user_tmi']\r\n                for (let i = 0; i < rows.length; i++) {\r\n                    let num = rows[i]['num']\r\n                    let mbti = rows[i]['mbti']\r\n                    let name = rows[i]['name']\r\n                    let tmi = rows[i]['tmi']\r\n                      let tmi_1 = tmi[0]\r\n                      let tmi_2 = tmi[1]\r\n                      let tmi_3 = tmi[2]\r\n\r\n\r\n                    let temp_html_2 = `<a href=\"/users/${num}\" class=\"rotate\">\r\n                                        <div class=\"card\">\r\n                                          <div class=\"front\">\r\n                                          </div>\r\n                                          <div class=\"back\">\r\n                                            <ul>\r\n                                              <li class=\"name\"># ${name}</li>\r\n                                              <li># ${tmi_1}</li>\r\n                                              <li># ${tmi_2}</li>\r\n                                              <li># ${tmi_3}</li>\r\n                                              <li># ${mbti}</li>\r\n                                            </ul>\r\n                                          </div>\r\n                                        </div>\r\n                                      </a>`\r\n\r\n                    $('#user_info').append(temp_html_2)\r\n                  }\r\n                }\r\n            })\r\n        }\r\n\r\n\r\n    </script>\r\n  </head>\r\n  <body>\r\n    <header class=\"index-header\"></header>\r\n    <main class=\"index-main\" id=\"user_info\">\r\n    </main>\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/templates/index.html b/templates/index.html
+--- a/templates/index.html	(revision 13ef10f37fd52ebdabcba429a919a05e22d36ee7)
++++ b/templates/index.html	(date 1668702694436)
+@@ -21,7 +21,7 @@
+         });
+ 
+ 
+-
++        
+         function user_name() {
+             $.ajax({
+               type: "GET",
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3bdfccb4-5629-49bd-a007-86f41e8e4a71\" name=\"변경\" comment=\"호승님 코드 간단한 수정&#10;&#10;주석 삭제 필요없는 코드 삭제&#10;&#10;certifi import&#10;환경 추가\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/static/css/screen/profile.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/static/css/screen/profile.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/templates/profile.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/templates/profile.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\r\n    <envs>\r\n      <env key=\"FLASK_APP\" value=\"app\" />\r\n    </envs>\r\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\r\n    <option name=\"myEnvs\">\r\n      <map>\r\n        <entry key=\"FLASK_APP\" value=\"app\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Hf7e5Y48cXdmzPviuTW6Cq2L1b\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Flask 서버.Flask (app.py)\">\r\n    <configuration name=\"profile.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63837/teamInfo/templates/profile.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"teamInfo\" type=\"PythonConfigurationType\" factoryName=\"Python\">\r\n      <module name=\"teamInfo\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/app.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Flask (app.py)\" type=\"Python.FlaskServer\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"teamInfo\" />\r\n      <option name=\"target\" value=\"$PROJECT_DIR$/app.py\" />\r\n      <option name=\"targetType\" value=\"PATH\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Flask 서버.Flask (app.py)\" />\r\n        <item itemvalue=\"JavaScript 디버그.profile.html\" />\r\n        <item itemvalue=\"Flask 서버.Flask (app.py)\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"애플리케이션 수준\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"디폴트 작업\">\r\n      <changelist id=\"3bdfccb4-5629-49bd-a007-86f41e8e4a71\" name=\"변경\" comment=\"\" />\r\n      <created>1668664378604</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668664378604</updated>\r\n      <workItem from=\"1668664382635\" duration=\"505000\" />\r\n      <workItem from=\"1668664896143\" duration=\"41000\" />\r\n      <workItem from=\"1668664942562\" duration=\"11365000\" />\r\n      <workItem from=\"1668678116802\" duration=\"10217000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"백엔드 시작&#10;&#10;URL 경로, template 지정\">\r\n      <created>1668665436309</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668665436309</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/kwj\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"변경점 없음\" />\r\n    <MESSAGE value=\"백엔드 시작&#10;&#10;URL 경로, template 지정\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"백엔드 시작&#10;&#10;URL 경로, template 지정\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/teamInfo$Flask__app_py_.coverage\" NAME=\"Flask (app.py) 커버리지 결과\" MODIFIED=\"1668694996460\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 13ef10f37fd52ebdabcba429a919a05e22d36ee7)
++++ b/.idea/workspace.xml	(date 1668702701297)
+@@ -3,9 +3,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="3bdfccb4-5629-49bd-a007-86f41e8e4a71" name="변경" comment="호승님 코드 간단한 수정&#10;&#10;주석 삭제 필요없는 코드 삭제&#10;&#10;certifi import&#10;환경 추가">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/static/css/screen/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screen/profile.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -22,11 +20,14 @@
+         <entry key="FLASK_APP" value="app" />
+       </map>
+     </option>
++  </component>
++  <component name="Git.Merge.Settings">
++    <option name="BRANCH" value="kwj" />
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="kwj" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -35,6 +36,7 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2Hf7e5Y48cXdmzPviuTW6Cq2L1b" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -90,9 +92,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JavaScript 디버그.profile.html" />
+         <item itemvalue="Flask 서버.Flask (app.py)" />
+         <item itemvalue="JavaScript 디버그.profile.html" />
+         <item itemvalue="Flask 서버.Flask (app.py)" />
++        <item itemvalue="JavaScript 디버그.profile.html" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -133,7 +137,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="origin/kwj" />
++                        <option value="master" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -150,7 +154,22 @@
+     <MESSAGE value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
+     <option name="LAST_COMMIT_MESSAGE" value="백엔드 시작&#10;&#10;URL 경로, template 지정" />
+   </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="javascript">
++          <url>file://$PROJECT_DIR$/templates/index.html</url>
++          <line>38</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668694996460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
++    <SUITE FILE_PATH="coverage/teampj$app__1_.coverage" NAME="app (1) 커버리지 결과" MODIFIED="1668588256438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../sparta/projects/mars" />
++    <SUITE FILE_PATH="coverage/teampj$app.coverage" NAME="app 커버리지 결과" MODIFIED="1668651110000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/teampj$test.coverage" NAME="test 커버리지 결과" MODIFIED="1668651937495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/team$app.coverage" NAME="app 커버리지 결과" MODIFIED="1668574697867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/teamInfo$Flask__app_py_.coverage" NAME="Flask (app.py) 커버리지 결과" MODIFIED="1668700987158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+   </component>
+ </project>
+\ No newline at end of file

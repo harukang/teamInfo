@@ -21,7 +21,7 @@
             const avatar='{{ avatar }}'
             const photosStr = '{{ photos }}'
             const photos = photosStr.slice(1,-1).replaceAll("&#39;","").split(",").map(photo=>photo.trim())
-
+            document.title= `4조 | {{ name }}`
             if(photos.length !==0){
                 for (let i = 1; i <= photos.length; i++) {
                     const tempHtml = `<a href=${userId}/photos/${i} class="feed">

@@ -49,11 +49,29 @@ def photo(user_id,photo_id):
     user = db.user.find_one({'num': int(user_id)})
     photo = user['photo'][int(photo_id)-1]
     comments = user['comment']
-    print(photo,comments,user)
 
     return render_template('watch.html',  comments=comments, photo=photo,user_id=user_id,photo_id=photo_id)
 
 
+@app.route('/comments', methods=["POST"])
+def post_comments():
+    comment = request.form['giveComment']
+    photo_id = request.form['photoId']
+    user_id = request.form['userId']
+
+    doc = {
+        "user_idx": user_id,
+        "photo_idx": photo_id,
+        "comment": comment
+    }
+
+    db.comments.insert_one(doc)
+    return jsonify({'msg': '작성 완료!'})
+
+@app.route('/comments', methods=["GET"])
+def get_comments():
+    comments = list(db.comments.find({}, {'_id': False}))
+    return jsonify({'comments': comments})
 
 
 if __name__ == '__main__':
